@@ -65,6 +65,8 @@ router.get('/adv', (req, res) => {
     },
     
     ];
+  res.render('adv', {"adv":adv});
+});
 
 router.get('/lenta', (req, res) => {
     var lenta =[
@@ -83,7 +85,7 @@ router.get('/lenta', (req, res) => {
     
     ];
 
-  res.render('adv', {"adv":adv});
+  res.render('lenta', {"lenta":lenta});
 });
 
 
