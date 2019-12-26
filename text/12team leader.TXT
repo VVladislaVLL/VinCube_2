@@ -1,0 +1,13 @@
+№	Мин	мин	мин 
+1	10	0	0		done
+2	10	0	0		done
+3	5 	0	0		done
+4	20	0	0		done
+5	20	10	0		done
+6
+7
+8	20	0	0		done
+9	20	0	0		done
+10	20	0	0		done
+11	30	30	
+12	done	 done
