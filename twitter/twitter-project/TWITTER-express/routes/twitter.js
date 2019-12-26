@@ -3,25 +3,28 @@ const router = express.Router();
 const faker = require('faker/locale/ru');
 
 /* GET home page. */
-router.get('/cities', (req, res) => {
+router.get('/news', (req, res) => {
     var dates = [
     {
-        "dates":"12.06.19"
+        "news":"В Бресте прошло открытие главной елки города", "autor": "BrestNews"
     },
     {
-        "dates":"12.06.19"
+        "news":"Ожидается похолодание, будет снег, ожидается гололедица", "autor": "Minsk-Weather"
     },
     {
-        "dates":"12.06.19"
+        "news":"Движение поездов приостановлено в связи с поломкой состава между станциями Малиновка - Петровщина", "autor": "Mins-Metro"
+    },
+    {
+        "news":"Встречайте Деда Мороза!", "autor": "BelPush"
     }
     ];
 
-  res.render('dates', {"dates":dates});
+  res.render('news', {"news":news});
 });
 
 
 
-router.get('/animal', (req, res) => {
+/*router.get('/animal', (req, res) => {
     var animal = [
     {
         "animal":"volk"
@@ -35,5 +38,5 @@ router.get('/animal', (req, res) => {
     ];
 
   res.render('animal', {"animal":animal});
-});
+});*/
 module.exports = router;
