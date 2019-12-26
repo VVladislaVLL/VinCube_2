@@ -1,46 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-	<!--<style type="text/css">
-		.all_objects{
-			display: flex;
-			justify-content: left;
-		}
-		.items{
-			max-width: 200px;
-			display: flex;
-			justify-content: left;
-			
-		}
-	</style>-->
-<title>Christmas Trees</title>
+<title>Art project</title>
+<meta charset="utf-8">
+<style>
+	.item{
+		max-width: 230px;
+	}
+    body {
+    	padding-left: 30px;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
 </head>
 <body>
-	<h1>Happy New Year!</h1>
-	<p>Date:</p><!--#echo var="DATE_LOCAL"-->
+<h1>В Гости К другу</h1>
+<!--#echo var="DATE_LOCAL"-->
+<p>Дата похода</p>
+<!--<div id="gorod"></div>-->
 
-
-	<h1>Города</h1>
-	<!--#include virtual="/app/cities"-->
-
-	
-	
-	<div >
-	<!--#include virtual="/app/trees"-->
-	</div>
-
-	
-
-
-
-
-
-
-
-
-
-
-
-	
+<!--#include virtual="/forest/dates"-->
+<p>Город</p>
+<!--#include virtual="/forest/city"-->
+<p>Зверек</p>
+<!--#include virtual="/forest/animal"-->
 </body>
+<template id="template">
+	<select>
+	<optgroup label="Выберете город">
+		{{#each gorod}}
+		<option>{{name}}</option>
+		{{/each}}
+	</optgroup>
+	</select>
+</template>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.5.3/handlebars.js"></script>
+<script>
+	var template = document.getElementById('template').
+	innerHTML;
+	var renderGorod = Handlebars.compile(template);
+	document.getElementById('gorod').innerHTML = 
+	renderGorod({
+		gorod: [
+		{
+			"name":"Минск"
+		},
+		{
+			"name":"Могилев"
+		},
+		{
+			"name":"Печи"
+		},
+		{
+			"name":"Борисов"
+		},
+		{
+			"name":"Витебск"
+		},
+		{
+			"name":"Гродно"
+		},
+		{
+			"name":"Вилейка"
+		}
+
+		]
+	});
+</script>
 </html>
+<!--<table align = "center" cellspacing = "15">
+		<tr>
+			<th>Название</th>
+			<th>Категория</th>
+			<th>Время</th>
+			<th>Место</th>
+			<th>Рейтинг</th>
+		</tr>
+	{{#each events}}
+
+		<tr align = "center">
+			<td>{{name}}</td>
+			<td>{{type}}</td>
+			<td>{{time}}</td>
+			<td>{{location}}</td>
+			<td>{{rating}}</td>
+		</tr>
+	{{/each}}
+</table> -->
+
+<!--<div class="1">
+			Номер Автобуса
+			<span class="n">Ближайший Автобус</span>
+		<ul>
+		{{#each timetable}}
+		<li>
+			{{number}}
+			<span class="m">{{time}}</span>
+		</li>
+		{{/each}}
+	</ul>
+	</div>-->

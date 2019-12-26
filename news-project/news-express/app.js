@@ -11,7 +11,8 @@ const exphbs  = require('express-handlebars');
 
 const routes = require('./routes/index');
 const users = require('./routes/user');
-const approutes = require('./routes/app');
+const bussroutes = require('./routes/buss');
+const forestroutes = require('./routes/forest');
 
 const app = express();
 
@@ -37,9 +38,10 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
+app.use('/events', routes);
 app.use('/users', users);
-app.use('/app', approutes);
+app.use('/buss', bussroutes);
+app.use('/forest',forestroutes);
 
 /// catch 404 and forward to error handler
 app.use((req, res, next) => {
