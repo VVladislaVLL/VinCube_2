@@ -3,51 +3,32 @@ const router = express.Router();
 const faker = require('faker/locale/ru');
 
 /* GET home page. */
-router.get('/dates', (req, res) => {
-    var dates = [
+router.get('/names', (req, res) => {
+    var names = [
     {
-        "dates":"12.06.19"
+        "firstName": faker.name.firstName(),
+        "lastName": faker.name.lastName()
     },
-    {
-        "dates":"12.06.19"
+  {
+        "firstName": faker.name.firstName(),
+        "lastName": faker.name.lastName()
     },
-    {
-        "dates":"12.06.19"
+      {
+        "firstName": faker.name.firstName(),
+        "lastName": faker.name.lastName()
+    },
+      {
+        "firstName": faker.name.firstName(),
+        "lastName": faker.name.lastName()
+    },
+      {
+        "firstName": faker.name.firstName(),
+        "lastName": faker.name.lastName()
     }
     ];
 
-  res.render('dates', {"dates":dates});
+  res.render('names', {"names":names});
 });
 
-router.get('/city', (req, res) => {
-    var city = [
-    {
-        "city":"minsk"
-    },
-    {
-        "city":"minsk"
-    },
-    {
-        "city":"minsk"
-    }
-    ];
 
-  res.render('city', {"city":city});
-});
-
-router.get('/animal', (req, res) => {
-    var animal = [
-    {
-        "animal":"volk"
-    },
-    {
-        "animal":"volk"
-    },
-    {
-        "animal":"volk"
-    }
-    ];
-
-  res.render('animal', {"animal":animal});
-});
 module.exports = router;
