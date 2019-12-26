@@ -61,8 +61,24 @@ router.get('/names', (req, res) => {
 router.get('/adv', (req, res) => {
     var adv =[
     {
-
         "adv":faker.image.food()
+    },
+    
+    ];
+
+router.get('/lenta', (req, res) => {
+    var lenta =[
+    {
+        "laut":faker.image.companyName(),
+        "info":faker.random.words()
+    },
+    {
+        "laut":faker.image.companyName(),
+        "info":faker.random.words()
+    },
+    {
+        "laut":faker.image.companyName(),
+        "info":faker.random.words()
     },
     
     ];
