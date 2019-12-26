@@ -3,7 +3,7 @@ const router = express.Router();
 const faker = require('faker/locale/ru');
 
 /* GET home page. */
-router.get('/dates', (req, res) => {
+router.get('/cities', (req, res) => {
     var dates = [
     {
         "dates":"12.06.19"
@@ -19,21 +19,7 @@ router.get('/dates', (req, res) => {
   res.render('dates', {"dates":dates});
 });
 
-router.get('/city', (req, res) => {
-    var city = [
-    {
-        "city":"minsk"
-    },
-    {
-        "city":"minsk"
-    },
-    {
-        "city":"minsk"
-    }
-    ];
 
-  res.render('city', {"city":city});
-});
 
 router.get('/animal', (req, res) => {
     var animal = [
