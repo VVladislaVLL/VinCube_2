@@ -15,16 +15,11 @@
 </style>
 </head>
 <body>
-<h1>В Гости К другу</h1>
-<!--#echo var="DATE_LOCAL"-->
-<p>Дата похода</p>
-<!--<div id="gorod"></div>-->
 
-<!--#include virtual="/forest/dates"-->
-<p>Город</p>
-<!--#include virtual="/forest/city"-->
-<p>Зверек</p>
-<!--#include virtual="/forest/animal"-->
+<p>Выбор города</p>
+<div id="gorod"></div>
+<p>Предложенные  имена</p>
+<!--#include virtual="/twitter/names"-->
 </body>
 <template id="template">
 	<select>
