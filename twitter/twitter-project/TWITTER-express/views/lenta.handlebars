@@ -2,7 +2,7 @@
 
 <head>
 	<style>
-		img{
+		.avatar{
 			width: 15px;
 			height: 15px;
 		}
@@ -11,7 +11,7 @@
 
 <ul>
 	{{#each lenta}}
-        <li><img src="{{img}}">{{laut}}-{{info}}</li>
+        <li><img class="avatar" src="{{avatar}}">{{laut}}-{{info}}</li>
         {{/each}}
 </ul>
 
