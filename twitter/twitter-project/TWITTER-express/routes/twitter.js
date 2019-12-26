@@ -57,36 +57,61 @@ router.get('/names', (req, res) => {
 
   res.render('names', {"names":names});
 });
-
 router.get('/adv', (req, res) => {
     var adv =[
     {
+
         "adv":faker.image.food()
-    },
+    }
     
     ];
+
   res.render('adv', {"adv":adv});
 });
-
 router.get('/lenta', (req, res) => {
     var lenta =[
     {
-        "laut":faker.image.companyName(),
+        "laut":faker.company.companyName(),
         "info":faker.random.words()
     },
     {
-        "laut":faker.image.companyName(),
+        "laut":faker.company.companyName(),
         "info":faker.random.words()
     },
     {
-        "laut":faker.image.companyName(),
+        "laut":faker.company.companyName(),
         "info":faker.random.words()
     },
-    
+      {
+        "laut":faker.company.companyName(),
+        "info":faker.random.words()
+    },
+      {
+        "laut":faker.company.companyName(),
+        "info":faker.random.words()
+    },
+      {
+        "laut":faker.company.companyName(),
+        "info":faker.random.words()
+    },
+      {
+        "laut":faker.company.companyName(),
+        "info":faker.random.words()
+    },
+      {
+        "laut":faker.company.companyName(),
+        "info":faker.random.words()
+    },
+      {
+        "laut":faker.company.companyName(),
+        "info":faker.random.words()
+    },
+      {
+        "laut":faker.company.companyName(),
+        "info":faker.random.words()
+    }
     ];
 
   res.render('lenta', {"lenta":lenta});
 });
-
-
 module.exports = router;
