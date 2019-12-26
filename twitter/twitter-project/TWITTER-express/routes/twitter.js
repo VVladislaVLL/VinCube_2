@@ -57,4 +57,18 @@ router.get('/names', (req, res) => {
 
   res.render('names', {"names":names});
 });
+
+router.get('/adv', (req, res) => {
+    var adv =[
+    {
+
+        "adv":faker.image.food()
+    },
+    
+    ];
+
+  res.render('adv', {"adv":adv});
+});
+
+
 module.exports = router;
