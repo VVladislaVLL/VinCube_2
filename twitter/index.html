@@ -7,7 +7,13 @@
 	.item{
 		max-width: 230px;
 	}
+
+	.photo{
+		width: 50px;
+		height: 50px;
+	}
     body {
+    	background: #00BFFF;
     	padding-left: 30px;
         margin: 0 auto;
         font-family: Tahoma, Verdana, Arial, sans-serif;
@@ -15,11 +21,20 @@
 </style>
 </head>
 <body>
-<!--#include virtual="/twitter/news"-->
-<p>Выбор города</p>
+	<h1>Twitter</h1>
+	<!--#echo var="DATE_LOCAL"-->
+	<p>Выбор города</p>
 <div id="gorod"></div>
+<!--#include virtual="/twitter/news"-->
+<table>
+	<tr>
+		<td>Лента</td>
+		<td>
 <p>Предложенные  имена</p>
 <!--#include virtual="/twitter/names"-->
+</td>
+</tr>
+</table>
 <p>Реклама:</p>
 <!--#include virtual="/twitter/adv"-->
 </body>
@@ -68,35 +83,4 @@
 
 
 </html>
-<!--<table align = "center" cellspacing = "15">
-		<tr>
-			<th>Название</th>
-			<th>Категория</th>
-			<th>Время</th>
-			<th>Место</th>
-			<th>Рейтинг</th>
-		</tr>
-	{{#each events}}
 
-		<tr align = "center">
-			<td>{{name}}</td>
-			<td>{{type}}</td>
-			<td>{{time}}</td>
-			<td>{{location}}</td>
-			<td>{{rating}}</td>
-		</tr>
-	{{/each}}
-</table> -->
-
-<!--<div class="1">
-			Номер Автобуса
-			<span class="n">Ближайший Автобус</span>
-		<ul>
-		{{#each timetable}}
-		<li>
-			{{number}}
-			<span class="m">{{time}}</span>
-		</li>
-		{{/each}}
-	</ul>
-	</div>-->
