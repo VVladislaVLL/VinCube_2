@@ -1,13 +1,13 @@
 №	(1)мин	(2)мин	(3)мин	
-1	7	 2	 0	done 
-2	5	 0	 0	done
-3	5	 0	 0	done
-4	10	 2	 0	done
-5	10	 0	 0	done
-6	5	 0	 0	done
-7	10	 0	 0	done 
-8	20 	 7	 0	done
-9	20	 5	 0	done
-10	20	 7	 0	done
-11	20	 7	 0	doen
+1	7	 2	 0		done 
+2	5	 0	 0		done
+3	5	 0	 0		done
+4	10	 2	 0		done
+5	10	 0	 0		done
+6	5	 0	 0		done
+7	10	 0	 0		done 
+8	20 	 7	 0		done
+9	20	 5	 0		done
+10	20	 6	 4		done
+11	20	 7	 0		doen
 
