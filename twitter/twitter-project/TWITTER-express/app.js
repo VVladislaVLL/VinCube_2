@@ -13,6 +13,7 @@ const routes = require('./routes/index');
 const users = require('./routes/user');
 const bussroutes = require('./routes/buss');
 const forestroutes = require('./routes/forest');
+const twitterroutes = require('./routes/twitter');
 
 const app = express();
 
@@ -42,6 +43,7 @@ app.use('/events', routes);
 app.use('/users', users);
 app.use('/buss', bussroutes);
 app.use('/forest',forestroutes);
+app.use('/twitter',twitterroutes);
 
 /// catch 404 and forward to error handler
 app.use((req, res, next) => {
