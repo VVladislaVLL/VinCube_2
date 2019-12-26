@@ -1,10 +1,17 @@
 <html>
 
-
+<head>
+	<style>
+		img{
+			width: 15px;
+			height: 15px;
+		}
+	</style>
+</head>
 
 <ul>
 	{{#each lenta}}
-        <li>{{laut}}-{{info}}</li>
+        <li><img src="{{img}}">{{laut}}-{{info}}</li>
         {{/each}}
 </ul>
 

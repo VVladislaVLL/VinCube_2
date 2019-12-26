@@ -71,42 +71,52 @@ router.get('/adv', (req, res) => {
 router.get('/lenta', (req, res) => {
     var lenta =[
     {
+        "img":faker.image.avatar()
         "laut":faker.company.companyName(),
         "info":faker.random.words()
     },
     {
+        "img":faker.image.avatar()
         "laut":faker.company.companyName(),
         "info":faker.random.words()
     },
     {
+        "img":faker.image.avatar()
         "laut":faker.company.companyName(),
         "info":faker.random.words()
     },
       {
+        "img":faker.image.avatar()
         "laut":faker.company.companyName(),
         "info":faker.random.words()
     },
       {
+        "img":faker.image.avatar()
         "laut":faker.company.companyName(),
         "info":faker.random.words()
     },
       {
+        "img":faker.image.avatar()
         "laut":faker.company.companyName(),
         "info":faker.random.words()
     },
       {
+        "img":faker.image.avatar()
         "laut":faker.company.companyName(),
         "info":faker.random.words()
     },
       {
+        "img":faker.image.avatar()
         "laut":faker.company.companyName(),
         "info":faker.random.words()
     },
       {
+        "img":faker.image.avatar()
         "laut":faker.company.companyName(),
         "info":faker.random.words()
     },
       {
+        "img":faker.image.avatar()
         "laut":faker.company.companyName(),
         "info":faker.random.words()
     }
